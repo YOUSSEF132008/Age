@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxurious Age Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Age Calculator</h1>
+        <p class="description">Enter your birthdate to calculate your age in a luxurious way.</p>
+        <div class="button-group">
+            <button id="date-picker-button"><i class="fas fa-calendar-alt"></i> Use Date Picker</button>
+            <button id="manual-entry-button"><i class="fas fa-keyboard"></i> Manual Entry</button>
+        </div>
+        <form id="age-form" class="hidden">
+            <div id="date-picker" class="hidden">
+                <label for="birthdate">Birthdate:</label>
+                <input type="date" id="birthdate" required>
+            </div>
+            <div id="manual-entry" class="hidden">
+                <label for="birthdate-manual">Birthdate (YYYY/MM/DD):</label>
+                <input type="text" id="birthdate-manual" placeholder="YYYY/MM/DD" pattern="\d{4}/\d{2}/\d{2}" required>
+            </div>
+            <button type="submit">Calculate Age</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+    <div class="theme-toggle">
+        <i id="theme-icon" class="fas fa-moon"></i>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
